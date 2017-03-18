@@ -6,8 +6,14 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int scoreTeamA = 0;
-    int scoreTeamB = 0;
+    int killsTeamA = 0;
+    int killsTeamB = 0;
+    int assistsTeamA = 0;
+    int assistsTeamB = 0;
+    int towersTeamA = 0;
+    int towersTeamB = 0;
+    int drakesTeamA = 0;
+    int drakesTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,74 +22,153 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the score for Team A by 1 point.
+     * Increase the kills for Team A by 1.
      */
-    public void addOneForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 1;
-        displayForTeamA(scoreTeamA);
+    public void addKillsForTeamA(View v) {
+        killsTeamA = killsTeamA + 1;
+        displayKillsTeamA(killsTeamA);
     }
 
     /**
-     * Increase the score for Team A by 2 points.
+     * Increase the assists for Team A by 1.
      */
-    public void addTwoForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 2;
-        displayForTeamA(scoreTeamA);
+    public void addAssistsForTeamA(View v) {
+        assistsTeamA = assistsTeamA + 1;
+        displayAssistsTeamA(assistsTeamA);
     }
 
     /**
-     * Increase the score for Team A by 3 points.
+     * Increase the towers for Team A by 1.
      */
-    public void addThreeForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 3;
-        displayForTeamA(scoreTeamA);
-    }
-    /**
-     * Increase the score for Team B by 1 point.
-     */
-    public void addOneForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 1;
-        displayForTeamB(scoreTeamB);
+    public void addTowersForTeamA(View v) {
+        towersTeamA = towersTeamA + 1;
+        displayTowersTeamA(towersTeamA);
     }
 
     /**
-     * Increase the score for Team B by 2 points.
+     * Increase the drakes for Team A by 1.
      */
-    public void addTwoForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 2;
-        displayForTeamB(scoreTeamB);
+    public void addDrakesForTeamA(View v) {
+        drakesTeamA = drakesTeamA + 1;
+        displayDrakesTeamA(drakesTeamA);
     }
 
     /**
-     * Increase the score for Team B by 3 points.
+     * Increase the kills for Team B by 1.
      */
-    public void addThreeForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 3;
-        displayForTeamB(scoreTeamB);
+    public void addKillsForTeamB(View v) {
+        killsTeamB = killsTeamB + 1;
+        displayKillsTeamB(killsTeamB);
+    }
+
+    /**
+     * Increase the assists for Team B by 1.
+     */
+    public void addAssistsForTeamB(View v) {
+        assistsTeamB = assistsTeamB + 1;
+        displayAssistsTeamB(assistsTeamB);
+    }
+
+    /**
+     * Increase the towers for Team B by 1.
+     */
+    public void addTowersForTeamB(View v) {
+        towersTeamB = towersTeamB + 1;
+        displayTowersTeamB(towersTeamB);
+    }
+
+    /**
+     * Increase the drakes for Team B by 1.
+     */
+    public void addDrakesForTeamB(View v) {
+        drakesTeamB = drakesTeamB + 1;
+        displayDrakesTeamB(drakesTeamB);
     }
 
     /**
      * Reset score.
      */
     public void reset(View v) {
-        scoreTeamA = 0;
-        scoreTeamB = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        killsTeamA = 0;
+        killsTeamB = 0;
+        assistsTeamA = 0;
+        assistsTeamB = 0;
+        towersTeamA = 0;
+        towersTeamB = 0;
+        drakesTeamA = 0;
+        drakesTeamB = 0;
+        displayKillsTeamA(killsTeamA);
+        displayKillsTeamB(killsTeamB);
+        displayAssistsTeamA(assistsTeamA);
+        displayAssistsTeamB(assistsTeamB);
+        displayTowersTeamA(towersTeamA);
+        displayTowersTeamB(towersTeamB);
+        displayDrakesTeamA(drakesTeamA);
+        displayDrakesTeamB(drakesTeamB);
     }
 
     /**
-     * Displays the given score for Team A.
+     * Displays the kills for Team A.
      */
-    public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+    public void displayKillsTeamA(int score) {
+        TextView killsView = (TextView) findViewById(R.id.team_a_kills);
+        killsView.setText(String.valueOf(score));
     }
+
     /**
-     * Displays the given score for Team B.
+     * Displays the assists for Team A.
      */
-    public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+    public void displayAssistsTeamA(int score) {
+        TextView assistsView = (TextView) findViewById(R.id.team_a_assists);
+        assistsView.setText(String.valueOf(score));
     }
+
+    /**
+     * Displays the towers for Team A.
+     */
+    public void displayTowersTeamA(int score) {
+        TextView towersView = (TextView) findViewById(R.id.team_a_towers);
+        towersView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the drakes for Team A.
+     */
+    public void displayDrakesTeamA(int score) {
+        TextView drakesView = (TextView) findViewById(R.id.team_a_drakes);
+        drakesView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the kills for Team B.
+     */
+    public void displayKillsTeamB(int score) {
+        TextView killsView = (TextView) findViewById(R.id.team_b_kills);
+        killsView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the assists for Team B.
+     */
+    public void displayAssistsTeamB(int score) {
+        TextView assistsView = (TextView) findViewById(R.id.team_b_assists);
+        assistsView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the towers for Team B.
+     */
+    public void displayTowersTeamB(int score) {
+        TextView towersView = (TextView) findViewById(R.id.team_b_towers);
+        towersView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the drakes for Team B.
+     */
+    public void displayDrakesTeamB(int score) {
+        TextView drakesView = (TextView) findViewById(R.id.team_b_drakes);
+        drakesView.setText(String.valueOf(score));
+    }
+
 }
