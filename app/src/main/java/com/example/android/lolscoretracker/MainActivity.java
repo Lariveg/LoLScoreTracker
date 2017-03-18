@@ -3,6 +3,7 @@ package com.example.android.lolscoretracker;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,11 +15,34 @@ public class MainActivity extends AppCompatActivity {
     int towersTeamB = 0;
     int drakesTeamA = 0;
     int drakesTeamB = 0;
+    TextView victoryMsg;
+    LinearLayout mainView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        victoryMsg = (TextView) findViewById(R.id.victory_msg);
+        mainView = (LinearLayout) findViewById(R.id.main_view);
+        victoryMsg.setVisibility(View.GONE);
+    }
+
+    /**
+     * Victory for Team A.
+     */
+    public void victoryForTeamA(View v) {
+        victoryMsg.setText("Team A Victory!");
+        victoryMsg.setVisibility(View.VISIBLE);
+        mainView.setVisibility(View.GONE);
+    }
+
+    /**
+     * Victory for Team B.
+     */
+    public void victoryForTeamB(View v) {
+        victoryMsg.setText("Team B Victory!");
+        victoryMsg.setVisibility(View.VISIBLE);
+        mainView.setVisibility(View.GONE);
     }
 
     /**
@@ -105,6 +129,8 @@ public class MainActivity extends AppCompatActivity {
         displayTowersTeamB(towersTeamB);
         displayDrakesTeamA(drakesTeamA);
         displayDrakesTeamB(drakesTeamB);
+        victoryMsg.setVisibility(View.GONE);
+        mainView.setVisibility(View.VISIBLE);
     }
 
     /**
