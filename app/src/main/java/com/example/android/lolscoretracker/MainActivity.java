@@ -18,10 +18,21 @@ public class MainActivity extends AppCompatActivity {
     TextView victoryMsg;
     LinearLayout mainView;
 
+    static final String KILLS_FOR_A = "1";
+    static final String KILLS_FOR_B = "2";
+    static final String ASSISTS_FOR_A = "3";
+    static final String ASSISTS_FOR_B = "4";
+    static final String TOWERS_FOR_A = "5";
+    static final String TOWERS_FOR_B = "6";
+    static final String DRAKES_FOR_A = "7";
+    static final String DRAKES_FOR_B = "8";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         victoryMsg = (TextView) findViewById(R.id.victory_msg);
         mainView = (LinearLayout) findViewById(R.id.main_view);
         victoryMsg.setVisibility(View.GONE);
@@ -199,4 +210,41 @@ public class MainActivity extends AppCompatActivity {
         drakesView.setText(String.valueOf(score));
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(KILLS_FOR_A, killsTeamA);
+        savedInstanceState.putInt(KILLS_FOR_B, killsTeamB);
+        savedInstanceState.putInt(ASSISTS_FOR_A, assistsTeamA);
+        savedInstanceState.putInt(ASSISTS_FOR_B, assistsTeamB);
+        savedInstanceState.putInt(TOWERS_FOR_A, towersTeamA);
+        savedInstanceState.putInt(TOWERS_FOR_B, towersTeamB);
+        savedInstanceState.putInt(DRAKES_FOR_A, drakesTeamA);
+        savedInstanceState.putInt(DRAKES_FOR_B, drakesTeamB);
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        killsTeamA = savedInstanceState.getInt(KILLS_FOR_A);
+        killsTeamB = savedInstanceState.getInt(KILLS_FOR_B);
+        assistsTeamA = savedInstanceState.getInt(ASSISTS_FOR_A);
+        assistsTeamB = savedInstanceState.getInt(ASSISTS_FOR_B);
+        towersTeamA = savedInstanceState.getInt(TOWERS_FOR_A);
+        towersTeamB = savedInstanceState.getInt(TOWERS_FOR_B);
+        drakesTeamA = savedInstanceState.getInt(DRAKES_FOR_A);
+
+
+        displayKillsTeamA(killsTeamA);
+        displayKillsTeamB(killsTeamB);
+        displayAssistsTeamA(assistsTeamA);
+        displayAssistsTeamB(assistsTeamB);
+        displayTowersTeamA(towersTeamA);
+        displayTowersTeamB(towersTeamB);
+        displayDrakesTeamA(drakesTeamA);
+        displayDrakesTeamB(drakesTeamB);
+    }
 }
