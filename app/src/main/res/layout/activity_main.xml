@@ -296,8 +296,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/main_view"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="@dimen/horizontal_margin"
+            android:layout_marginBottom="@dimen/horizontal_margin"
             android:onClick="reset"
             android:text="@string/reset_btn"
             style="@style/btnStyle"/>
