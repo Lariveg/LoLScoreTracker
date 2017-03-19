@@ -18,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
     TextView victoryMsg;
     LinearLayout mainView;
 
-    static final String KILLS_FOR_A = "1";
-    static final String KILLS_FOR_B = "2";
-    static final String ASSISTS_FOR_A = "3";
-    static final String ASSISTS_FOR_B = "4";
-    static final String TOWERS_FOR_A = "5";
-    static final String TOWERS_FOR_B = "6";
-    static final String DRAKES_FOR_A = "7";
-    static final String DRAKES_FOR_B = "8";
+    static final String KILLS_FOR_A = "killsA";
+    static final String KILLS_FOR_B = "killsB";
+    static final String ASSISTS_FOR_A = "assistsA";
+    static final String ASSISTS_FOR_B = "assistsB";
+    static final String TOWERS_FOR_A = "towersA";
+    static final String TOWERS_FOR_B = "towersB";
+    static final String DRAKES_FOR_A = "drakesA";
+    static final String DRAKES_FOR_B = "drakesB";
 
 
     @Override
