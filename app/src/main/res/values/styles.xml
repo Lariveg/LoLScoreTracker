@@ -8,4 +8,40 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="btnStyle">
+        <item name="android:background">@drawable/btn_shape</item>
+        <item name="android:textColor">@color/btnTxtColor</item>
+    </style>
+
+    <style name="redBtnStyle">
+        <item name="android:background">@drawable/red_btn</item>
+        <item name="android:textColor">@color/redBtnTxtColor</item>
+    </style>
+
+    <style name="blueBtnStyle">
+        <item name="android:background">@drawable/blue_btn</item>
+        <item name="android:textColor">@color/blueBtnTxtColor</item>
+    </style>
+
+    <style name="redDisplayStyle">
+        <item name="android:textSize">@dimen/display_txt</item>
+        <item name="android:textColor">@color/redBtnTxtColor</item>
+        <item name="android:text">0</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="blueDisplayStyle">
+        <item name="android:textSize">@dimen/display_txt</item>
+        <item name="android:textColor">@color/blueBtnStrokeColor</item>
+        <item name="android:text">0</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="teamStyle">
+        <item name="android:textSize">@dimen/teams_txt</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/horizontal_margin</item>
+    </style>
+
 </resources>

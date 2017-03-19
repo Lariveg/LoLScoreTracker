@@ -31,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
      * Victory for Team A.
      */
     public void victoryForTeamA(View v) {
-        victoryMsg.setText("Team A Victory!");
+        victoryMsg.setText("Team Red\nVictory!");
         victoryMsg.setVisibility(View.VISIBLE);
+        victoryMsg.setTextColor(getResources().getColor(R.color.redBtnTxtColor));
         mainView.setVisibility(View.GONE);
     }
 
@@ -40,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
      * Victory for Team B.
      */
     public void victoryForTeamB(View v) {
-        victoryMsg.setText("Team B Victory!");
+        victoryMsg.setText("Team Blue\nVictory!");
         victoryMsg.setVisibility(View.VISIBLE);
+        victoryMsg.setTextColor(getResources().getColor(R.color.blueBtnStrokeColor));
         mainView.setVisibility(View.GONE);
     }
 

@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">LoL Score Tracker</string>
+
+    <string name="team_red">Team Red</string>
+    <string name="team_purple">Team Blue</string>
+
+    <!--For Buttons-->
+    <string name="kills_btn">Kills</string>
+    <string name="assists_btn">Assists</string>
+    <string name="towers_btn">Towers</string>
+    <string name="drakes_btn">Drakes</string>
+    <string name="nexus_btn">Nexus</string>
+    <string name="reset_btn">Reset</string>
 </resources>
