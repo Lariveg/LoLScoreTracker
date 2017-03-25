@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     static final String DRAKES_FOR_A = "drakesA";
     static final String DRAKES_FOR_B = "drakesB";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
